@@ -1,0 +1,31 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: "loans"
+  profiles:
+    active: "prod"
+
+  datasource:
+    url: jdbc:mysql://localhost:3308/loansdb
+    username: root
+    password: 'root'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update   # ensures tables are created/updated automatically
+  sql:
+    init:
+      mode: always
+
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+loans:
+  message: "Welcome to Loans Service related PROD APIs"
+  contactDetails:
+    name: "Madhav Deshmukh"
+    email: "madhav@deshmukh.com"
+  onCallSupport:
+    - (655) 123457
+    - (655) 123457

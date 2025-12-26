@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+  config:
+    import:
+      - application-qa.yml
+      - application-prod.yml
+  profiles:
+    active: qa   # 👈 activates QA profile by default
+
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to Accounts Service"
+  contactDetails:
+    name: "Madhav Deshmukh"
+    email: "0o3QH@example.com"
+  onCallSupport:
+    - (020) 123456
+    - (020) 123456

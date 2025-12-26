@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: qa
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to Accounts Service related QA APIs"
+  contactDetails:
+    name: "Priya Deshmukh"
+    email: "priya@deshmukh.com"
+  onCallSupport:
+    - (655) 123456
+    - (655) 123456

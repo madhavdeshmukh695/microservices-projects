@@ -1,0 +1,7 @@
+*.tar
+*.zip
+*.jar
+target/
+node_modules/
+.idea/
+.vscode/
