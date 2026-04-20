@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to Accounts Service"
+  contactDetails:
+    name: "Madhav Deshmukh"
+    email: "0o3QH@example.com"
+  onCallSupport:
+    - (020) 123456
+    - (020) 123456
