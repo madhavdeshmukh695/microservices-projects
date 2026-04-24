@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
 
+import static org.springframework.cloud.gateway.support.RouteMetadataUtils.CONNECT_TIMEOUT_ATTR;
+import static org.springframework.cloud.gateway.support.RouteMetadataUtils.RESPONSE_TIMEOUT_ATTR;
+
 @SpringBootApplication
 public class GatewayserverApplication {
 
@@ -32,7 +35,9 @@ public class GatewayserverApplication {
                 .route(p->p
                         .path("/eazybank/cards/**")
                         .filters(f->f.rewritePath("/eazybank/cards/(?<segment>.*)","/${segment}")
-                                .addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
+                                .addResponseHeader("X-Response-Time", LocalDateTime.now().toString())
+                                .metadata(RESPONSE_TIMEOUT_ATTR, 100)
+                                .metadata(CONNECT_TIMEOUT_ATTR, 100))
                         .uri("lb://CARDS")).build();
     }
 }

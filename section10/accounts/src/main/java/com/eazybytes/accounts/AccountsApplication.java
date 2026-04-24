@@ -12,6 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import com.eazybytes.accounts.dto.AccountContactInfoDto;
 
+
 @SpringBootApplication
 @EnableFeignClients
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")

@@ -32,7 +32,7 @@ public class CustomerServiceImpl implements ICustomerService {
     @Override
     public CustomersDetailsDto fetchCustomersDetails(String mobileNumber, String correlationId) {
         Customer customer = customerRepository.findByMobileNumber(mobileNumber)
-                .orElseThrow(() -> new CustomerAlreadyExitstsException(AccountsConstants.CUSTOMER_ALREADY_EXISTS));
+                .orElseThrow(() -> new ResourceNotFoundException("Customer", "mobileNumber", mobileNumber));
 
         Accounts accounts = accountRepository.findByCustomerId(customer.getCustomerId())
                 .orElseThrow(()-> new ResourceNotFoundException("Account", "customerId", customer.getCustomerId()));
