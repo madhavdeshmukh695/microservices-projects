@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+cards:
+  message: "Welcome to Cards Service"
+  contactDetails:
+    name: "Madhav Deshmukh"
+    email: "0o3QH@example.com"
+  onCallSupport:
+    - (020) 123457
+    - (020) 123457
