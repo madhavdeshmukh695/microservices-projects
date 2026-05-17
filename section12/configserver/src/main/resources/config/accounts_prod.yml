@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to Accounts Service related PROD APIs"
+  contactDetails:
+    name: "EazyBank Support"
+    email: "support@eazybank.com"
+  onCallSupport:
+    - (022) 987654
+    - (022) 987654
